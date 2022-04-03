@@ -1,4 +1,4 @@
-package Atividade_1;
+package Atividade_2;
 
 public class Motor {
     private int qtdPist;

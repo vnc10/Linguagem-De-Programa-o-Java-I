@@ -1,6 +1,6 @@
-package Atividade_1;
+package Atividade_2;
 
-public class Veiculo {
+public abstract class Veiculo {
 
     private String placa;
     private String marca;
@@ -97,4 +97,6 @@ public class Veiculo {
         this.motor.setPotencia(potencia);
         this.motor.setQtdPist(qtdPist);
     }
+
+    abstract float calcVel(float velocMax);
 }
