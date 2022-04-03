@@ -1,8 +1,12 @@
 package Atividade_2;
 
-public class Passeio extends Veiculo {
+final public class Passeio extends Veiculo {
 
     private int qtdPassageiros;
+
+    public Passeio() {
+        this.qtdPassageiros = 0;
+    }
 
     public Passeio(int qtdPassageiros) {
         this.qtdPassageiros = qtdPassageiros;
@@ -12,7 +16,12 @@ public class Passeio extends Veiculo {
         return qtdPassageiros;
     }
 
-    public void setQtdPassageiros(int qtdPassageiros) {
+    public final void setQtdPassageiros(int qtdPassageiros) {
         this.qtdPassageiros = qtdPassageiros;
     }
+
+    public float calcVel(float velocMax){
+        return velocMax * 1000;
+    }
+
 }

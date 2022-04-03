@@ -1,6 +1,6 @@
 package Atividade_2;
 
-public class Motor {
+final public class Motor {
     private int qtdPist;
 
     private int potencia;
@@ -19,7 +19,7 @@ public class Motor {
         return qtdPist;
     }
 
-    public void setQtdPist(int qtdPist) {
+    public final void setQtdPist(int qtdPist) {
         this.qtdPist = qtdPist;
     }
 
@@ -27,7 +27,7 @@ public class Motor {
         return potencia;
     }
 
-    public void setPotencia(int potencia) {
+    public final void setPotencia(int potencia) {
         this.potencia = potencia;
     }
 }

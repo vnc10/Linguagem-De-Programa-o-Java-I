@@ -5,11 +5,10 @@ public abstract class Veiculo {
     private String placa;
     private String marca;
     private String modelo;
-
     private String cor;
     private float velocMax;
     private int qtdRodas;
-    private Motor motor;
+    private final Motor motor;
 
     public Veiculo() {
         this.placa = "";
@@ -45,7 +44,7 @@ public abstract class Veiculo {
         return placa;
     }
 
-    public void setPlaca(String placa) {
+    public final void setPlaca(String placa) {
         this.placa = placa;
     }
 
@@ -53,7 +52,7 @@ public abstract class Veiculo {
         return marca;
     }
 
-    public void setMarca(String marca) {
+    public final void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -61,7 +60,7 @@ public abstract class Veiculo {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
+    public final void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
@@ -69,7 +68,7 @@ public abstract class Veiculo {
         return cor;
     }
 
-    public void setCor(String cor) {
+    public final void setCor(String cor) {
         this.cor = cor;
     }
 
@@ -77,7 +76,7 @@ public abstract class Veiculo {
         return velocMax;
     }
 
-    public void setVelocMax(float velocMax) {
+    public final void setVelocMax(float velocMax) {
         this.velocMax = velocMax;
     }
 
@@ -85,7 +84,7 @@ public abstract class Veiculo {
         return qtdRodas;
     }
 
-    public void setQtdRodas(int qtdRodas) {
+    public final void setQtdRodas(int qtdRodas) {
         this.qtdRodas = qtdRodas;
     }
 
@@ -93,7 +92,7 @@ public abstract class Veiculo {
         return motor;
     }
 
-    public void setMotor(int potencia, int qtdPist) {
+    public final void setMotor(int potencia, int qtdPist) {
         this.motor.setPotencia(potencia);
         this.motor.setQtdPist(qtdPist);
     }
