@@ -1,4 +1,4 @@
-package Atividade_2;
+package Atividade_3;
 
 public class Teste {
     public static void main(String arg[]) {
