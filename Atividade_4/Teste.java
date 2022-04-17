@@ -122,7 +122,7 @@ public class Teste {
                         System.out.printf("\n Quantidade de rodas do veiculo de passeio: " + passeios.get(i).getQtdRodas());
                         System.out.printf("\n Quantidade de pista do motor do veiculo de passeio: " + passeios.get(i).getMotor().getQtdPist());
                         System.out.printf("\n Quantidade de pontecia do motor do veiculo de passeio: " + passeios.get(i).getMotor().getPotencia());
-                        System.out.printf("\n Quantidade de pssoas do veiculo de passeio:" + passeios.get(i).getQtdPassageiros());
+                        System.out.printf("\n Quantidade de pessoas do veiculo de passeio:" + passeios.get(i).getQtdPassageiros());
                         System.out.println("\n -------------------------------------------------------------\n");
                     }
                 }
