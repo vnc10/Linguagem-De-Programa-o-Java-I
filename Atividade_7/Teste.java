@@ -21,73 +21,63 @@ public class Teste {
             opt = Integer.parseInt(leitura.entDados("\n Digite a opção do menu acima: "));
 
             if (opt == 1) {
-                if (bdVeiculos.getPasseios().size() < 5) {
-                    for (int j = 0; bdVeiculos.getPasseios().size() < 5; j++) {
-                        Passeio passeio = new Passeio();
-                        String novaPlaca;
-                        passeio.setQtdPassageiros(Integer.parseInt(leitura.entDados("\n Digite a quantidade de passageiros: ")));
-                        try {
-                            novaPlaca = bdVeiculos.verificaPlaca(leitura.entDados("\n Digite o numero da placa: "));
-                        } catch (VeicExistException vee) {
-                            break;
-                        }
-                        passeio.setPlaca(novaPlaca);
-                        passeio.setMarca(leitura.entDados("\n Digite a marca: "));
-                        passeio.setModelo(leitura.entDados("\n Digite o modelo: "));
-                        passeio.setCor(leitura.entDados("\n Digite a cor: "));
-                        try {
-                            passeio.setVelocMax(Integer.parseInt(leitura.entDados("\n Digite a velocidade maxima: ")));
-                        } catch (VelocException ve) {
-                            passeio.setVelocMax(100);
-                        }
-                        passeio.setQtdRodas(Integer.parseInt(leitura.entDados("\n Digite a quantidade de rodas: ")));
-                        int qtdPist = Integer.parseInt(leitura.entDados("\n Digite a quantidade de pistão: "));
-                        int potencia = Integer.parseInt(leitura.entDados("\n Digite a potencia do carro: "));
-                        passeio.setMotor(qtdPist, potencia);
-                        bdVeiculos.getPasseios().add(passeio);
-                        String continuar = leitura.entDados("\n Quer adicionar um novo carro de passeio?");
-                        if (continuar.equalsIgnoreCase("n") || continuar.equalsIgnoreCase("nao")) {
-                            break;
-                        }
+                while (true) {
+                    Passeio passeio = new Passeio();
+                    String novaPlaca;
+                    passeio.setQtdPassageiros(Integer.parseInt(leitura.entDados("\n Digite a quantidade de passageiros: ")));
+                    try {
+                        novaPlaca = bdVeiculos.verificaPlaca(leitura.entDados("\n Digite o numero da placa: "));
+                    } catch (VeicExistException vee) {
+                        break;
                     }
-
-                } else {
-                    System.out.println("\n Carro de Passeio cheio!!");
+                    passeio.setPlaca(novaPlaca);
+                    passeio.setMarca(leitura.entDados("\n Digite a marca: "));
+                    passeio.setModelo(leitura.entDados("\n Digite o modelo: "));
+                    passeio.setCor(leitura.entDados("\n Digite a cor: "));
+                    try {
+                        passeio.setVelocMax(Integer.parseInt(leitura.entDados("\n Digite a velocidade maxima: ")));
+                    } catch (VelocException ve) {
+                        passeio.setVelocMax(100);
+                    }
+                    passeio.setQtdRodas(Integer.parseInt(leitura.entDados("\n Digite a quantidade de rodas: ")));
+                    int qtdPist = Integer.parseInt(leitura.entDados("\n Digite a quantidade de pistão: "));
+                    int potencia = Integer.parseInt(leitura.entDados("\n Digite a potencia do carro: "));
+                    passeio.setMotor(qtdPist, potencia);
+                    bdVeiculos.getPasseios().add(passeio);
+                    String continuar = leitura.entDados("\n Quer adicionar um novo carro de passeio?");
+                    if (continuar.equalsIgnoreCase("n") || continuar.equalsIgnoreCase("nao")) {
+                        break;
+                    }
                 }
             } else if (opt == 2) {
-                if (bdVeiculos.getCargas().size() < 5) {
-                    for (int j = 0; bdVeiculos.getCargas().size() < 5; j++) {
-                        Carga carga = new Carga();
-                        String novaPlaca;
-                        carga.setCargaMax(Integer.parseInt(leitura.entDados("\n Digite a quantidade de carga maxima: ")));
-                        carga.setTara(Integer.parseInt(leitura.entDados("\n Digite a quantidade de tara: ")));
-                        try {
-                            novaPlaca = bdVeiculos.verificaPlaca(leitura.entDados("\n Digite o numero da placa: "));
-                        } catch (VeicExistException vee) {
-                            break;
-                        }
-                        carga.setPlaca(novaPlaca);
-                        carga.setMarca(leitura.entDados("\n Digite a marca: "));
-                        carga.setModelo(leitura.entDados("\n Digite o modelo: "));
-                        carga.setCor(leitura.entDados("\n Digite a cor: "));
-                        try {
-                            carga.setVelocMax(Integer.parseInt(leitura.entDados("\n Digite a velocidade maxima: ")));
-                        } catch (VelocException ve) {
-                            carga.setVelocMax(90);
-                        }
-                        carga.setQtdRodas(Integer.parseInt(leitura.entDados("\n Digite a quantidade de rodas: ")));
-                        int qtdPist = Integer.parseInt(leitura.entDados("\n Digite a quantidade de pistão: "));
-                        int potencia = Integer.parseInt(leitura.entDados("\n Digite a potencia do carro: "));
-                        carga.setMotor(qtdPist, potencia);
-                        bdVeiculos.getCargas().add(carga);
-                        String continuar = leitura.entDados("\n Quer adicionar um novo carro de carga?");
-                        if (continuar.equalsIgnoreCase("n") || continuar.equalsIgnoreCase("nao")) {
-                            break;
-                        }
+                while (true) {
+                    Carga carga = new Carga();
+                    String novaPlaca;
+                    carga.setCargaMax(Integer.parseInt(leitura.entDados("\n Digite a quantidade de carga maxima: ")));
+                    carga.setTara(Integer.parseInt(leitura.entDados("\n Digite a quantidade de tara: ")));
+                    try {
+                        novaPlaca = bdVeiculos.verificaPlaca(leitura.entDados("\n Digite o numero da placa: "));
+                    } catch (VeicExistException vee) {
+                        break;
                     }
-
-                } else {
-                    System.out.println("\n Carro de carga cheio!!");
+                    carga.setPlaca(novaPlaca);
+                    carga.setMarca(leitura.entDados("\n Digite a marca: "));
+                    carga.setModelo(leitura.entDados("\n Digite o modelo: "));
+                    carga.setCor(leitura.entDados("\n Digite a cor: "));
+                    try {
+                        carga.setVelocMax(Integer.parseInt(leitura.entDados("\n Digite a velocidade maxima: ")));
+                    } catch (VelocException ve) {
+                        carga.setVelocMax(90);
+                    }
+                    carga.setQtdRodas(Integer.parseInt(leitura.entDados("\n Digite a quantidade de rodas: ")));
+                    int qtdPist = Integer.parseInt(leitura.entDados("\n Digite a quantidade de pistão: "));
+                    int potencia = Integer.parseInt(leitura.entDados("\n Digite a potencia do carro: "));
+                    carga.setMotor(qtdPist, potencia);
+                    bdVeiculos.getCargas().add(carga);
+                    String continuar = leitura.entDados("\n Quer adicionar um novo carro de carga?");
+                    if (continuar.equalsIgnoreCase("n") || continuar.equalsIgnoreCase("nao")) {
+                        break;
+                    }
                 }
             } else if (opt == 3) {
                 if (bdVeiculos.getPasseios().isEmpty()) {

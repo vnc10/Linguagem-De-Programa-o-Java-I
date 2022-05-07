@@ -5,8 +5,8 @@ import java.util.List;
 
 public class BDVeiculos {
 
-    private final List<Passeio> passeios = new ArrayList<>(5);
-    private final List<Carga> cargas = new ArrayList<>(5);
+    private final List<Passeio> passeios = new ArrayList<>();
+    private final List<Carga> cargas = new ArrayList<>();
 
     public BDVeiculos() {
     }
